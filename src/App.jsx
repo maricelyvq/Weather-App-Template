@@ -8,6 +8,7 @@ function App() {
   const [userInput, setUserInput] = useState('');
   const [city, setCity] = useState(userInput);
   const [weatherData, setWeatherData] = useState({});
+  const [timeOfDay, setTimeOfDay] = useState(''); // morning, afternoon, evening, night
 
   const resetData = () => {
     setWeatherData({});
@@ -25,12 +26,10 @@ function App() {
     }
   }, [city]);
 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Path2Tech Weather App</h1>
-        {(Object.keys(weatherData).length !== 0) ? <Weather data={weatherData} resetData={resetData} /> : <Search userInput={userInput} setUserInput={setUserInput} setCity={setCity} />}
-      </header>
+    <div className={`${timeOfDay}`} >
+      {(Object.keys(weatherData).length !== 0) ? <Weather data={weatherData} resetData={resetData} /> : <Search userInput={userInput} setUserInput={setUserInput} setCity={setCity} />}
     </div>
   );
 }

@@ -1,9 +1,11 @@
 import React from 'react'
+import '../App.css'
 
 const Search = ({userInput, setUserInput, setCity}) => {
   return (
     <>
-      <h1>Weather</h1>
+    <div className="App-header">
+      <h3>Weather</h3>
       <label htmlFor='city-name'>
           <input 
             id='city-name'
@@ -14,6 +16,7 @@ const Search = ({userInput, setUserInput, setCity}) => {
         />
       </label>
       <button onClick={() => {setCity(userInput)}}>Submit</button>
+    </div>
     </>
   )
 }
