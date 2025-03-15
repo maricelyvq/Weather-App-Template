@@ -12,6 +12,8 @@ function App() {
 
   const resetData = () => {
     setWeatherData({});
+    setCity('');
+    setUserInput('');
   } // reset weatherData object
 
   useEffect(() => {

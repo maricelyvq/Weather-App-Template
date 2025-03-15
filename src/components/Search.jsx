@@ -15,7 +15,7 @@ const Search = ({userInput, setUserInput, setCity}) => {
             onChange={(e) => setUserInput(e.target.value)}
         />
       </label>
-      <button onClick={() => {setCity(userInput)}}>Submit</button>
+      <button id="submitbtn" onClick={() => {setCity(userInput)}}>Submit</button>
     </div>
     </>
   )
