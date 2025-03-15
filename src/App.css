@@ -1,45 +1,65 @@
+@import "tailwindcss";
 .App {
   display: contents;
-  size: 60%;
-  border: 1px solid black;
+  text-align: center;
+  border-radius: 8px;
+  size: 70%;
  
 }
-
 
 .App-header {
   background-color: rgb(67, 148, 202);
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: rgb(25, 8, 177);
 }
+.nav-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
 
-/* .test-header {
-  background-color: #61dafb;
-} */
+.nav-links li {
+  display: inline;
+}
 
-/* .App-link {
+.nav-links a {
   color: #61dafb;
-} */
+  text-decoration: none;
+  font-size: 1.2em;
+}
 #top-half {
   display: grid;
-  flex-direction: row;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   font-size: xx-large;
   align-items: center;
-  justify-content: center;
+  justify-items: center;
   height: auto;
   text-shadow: #61dafb;
   color: rgb(17, 15, 15);
-  background-color: skyblue 
+  background-color: skyblue
 }
+.time { grid-area: 1 / 1 / 2 / 3; }
+.city-name { grid-area: 1 / 3 / 2 / 4; }
+.icon {
+ grid-area: 2 / 1 / 3 / 2;
+  background-color: rgb(20, 99, 99); }
+.temp { grid-area: 2 / 2 / 3 / 3; }
+.description { grid-area: 2 / 3 / 3 / 4; }
 
 .grid-container {
   display: grid; 
   grid-template-columns: repeat(3, 1fr);
   gap: 10px; /* Adjust the gap between columns as needed */
   padding: 10px;
-  background-color: chocolate;
+  background-color: rgb(7, 3, 59);
 }
 
 .grid-item {

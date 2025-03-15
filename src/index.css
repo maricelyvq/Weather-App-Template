@@ -1,3 +1,4 @@
+@import "tailwindcss";
 :root {
   --primary-color: #007bff;
   --secondary-color: #6c757d;
@@ -16,11 +17,10 @@
 
 body {
   margin-top:3%;
-  background-image:url('./assets/bg1.jpg');
+  background-color: rgb(196, 226, 236);
   background-size: var(--breakpoint-lg);
   font-family: 'Roboto', sans-serif;
   height: 30px;
-  justify-items: center;
   
 }
 

@@ -4,7 +4,7 @@ import '../App.css'
 const Search = ({userInput, setUserInput, setCity}) => {
   return (
     <>
-    <div className="App-header">
+    <div >
       <h3>Weather</h3>
       <label htmlFor='city-name'>
           <input 
@@ -21,4 +21,4 @@ const Search = ({userInput, setUserInput, setCity}) => {
   )
 }
 
-export default Search
+export default Search;
