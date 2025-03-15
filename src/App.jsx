@@ -8,7 +8,7 @@ function App() {
   const [userInput, setUserInput] = useState('');
   const [city, setCity] = useState(userInput);
   const [weatherData, setWeatherData] = useState({});
-  const [timeOfDay, setTimeOfDay] = useState(''); // morning, afternoon, evening, night
+ // const [timeOfDay, setTimeOfDay] = useState(''); // morning, afternoon, evening, night
 
   const resetData = () => {
     setWeatherData({});
@@ -30,7 +30,7 @@ function App() {
 
 
   return (
-    <div className={`${timeOfDay}`} >
+    <div className="App"> 
       {(Object.keys(weatherData).length !== 0) ? <Weather data={weatherData} resetData={resetData} /> : <Search userInput={userInput} setUserInput={setUserInput} setCity={setCity} />}
     </div>
   );
