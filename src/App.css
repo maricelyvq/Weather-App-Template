@@ -1,11 +1,11 @@
+/* src/styles/tailwind.css */
+@import "tailwindcss";
 .App {
   display: contents;
   size: 60%;
   border: 1px solid black;
  
 }
-
-
 .App-header {
   background-color: rgb(67, 148, 202);
   display: flex;

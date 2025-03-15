@@ -7,7 +7,7 @@ const Search = ({userInput, setUserInput, setCity}) => {
     <div className="App-header">
       <h3>Weather</h3>
       <label htmlFor='city-name'>
-          <input 
+          <input  
             id='city-name'
             name='cityName'
             placeholder='New York'
