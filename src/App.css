@@ -1,53 +1,128 @@
 /* src/styles/tailwind.css */
-@import "tailwindcss";
+/* @import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities"; */
+
+
 .App {
-  display: contents;
-  size: 60%;
-  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
  
+}
+.content {
+  flex: 1;
 }
 .App-header {
   background-color: rgb(67, 148, 202);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%; /* Change from 100vh to 100% to cover the full width */
+  display: flex; /* Use flexbox for layout */
+  padding: 5px;/* Add padding for spacing */
   font-size: calc(10px + 2vmin);
-  color: rgb(25, 8, 177);
+  color: rgba(8, 8, 8, 0.356);
+}
+.Search {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  width: 60%;
+  margin: 20px auto;
+  justify-content: center;
+  margin: 20px auto; /* Center the element horizontally */
 }
 
-/* .test-header {
-  background-color: #61dafb;
-} */
-
-/* .App-link {
-  color: #61dafb;
-} */
 #top-half {
   display: grid;
+  columns: 2;
+  gap: 10px;
   flex-direction: row;
-  font-size: xx-large;
-  align-items: center;
-  justify-content: center;
-  height: auto;
-  text-shadow: #61dafb;
-  color: rgb(17, 15, 15);
-  background-color: skyblue 
-}
 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1.5em;
+  width: 50%;
+  margin: 20px auto;
+  background-color:rgba(5, 46, 133, 0.274)
+}
+#bottom-half {
+  display: grid;
+  columns: 2;
+  gap: 10px;
+  flex-direction: row;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1.5em;
+  width: 50%;
+  margin: 10px auto;
+  background-color:rgba(5, 46, 133, 0.274)
+}
+#reset {
+  justify-content: center;
+
+}
 .grid-container {
   display: grid; 
+  width: 50%;
+  justify-content: center;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px; /* Adjust the gap between columns as needed */
-  padding: 10px;
-  background-color: chocolate;
+  /*gap: 10px;  Adjust the gap between columns as needed */
+  background-color: rgb(35, 6, 161);
+  margin: 20px auto;
 }
 
 .grid-item {
   background-color: var(--light-color);
   border: 1px solid var(--dark-color);
-  padding: 20px;
   text-align: center;
 }
 button {
 cursor: pointer;
+}
+input.pretty-input {
+  padding: 10px;
+  border: 2px solid #61dafb;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input.pretty-input:focus {
+  border-color: #007acc;
+  box-shadow: 0 0 5px rgba(0, 122, 204, 0.5);
+  outline: none;
+}
+.time {
+  font-size: 1 em;
+  color: #333;
+  margin: 20px 0;
+  justify-content: left;
+}
+button.pretty-reset {
+  padding: 10px 20px;
+  border: 2px solid #61dafb;
+  border-radius: 5px;
+  font-size: 16px;
+  color: white;
+  background-color: #007acc;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+button.pretty-reset:hover {
+  background-color: #005f99;
+}
+
+button.pretty-reset:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 122, 204, 0.5);
+}
+footer {
+  background-color: rgb(67, 148, 202);
+  width: 100%;
+  display: flex;
+  font-size: calc(10px + 2vmin);
+  color: rgba(15, 16, 17, 0.356);
+  position: fixed;
+
 }

@@ -3,10 +3,11 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <header className="App-header">
-      <h3>Path2Tech Weather App</h3>
-   
+    <div className="App-header">
+    <header >
+      <p>Path2Tech Weather App</p>
     </header>
+  </div>  
   );
 }
 
