@@ -11,14 +11,17 @@ const Search = ({ userInput, setUserInput, setCity }) => {
             id='city-name'
             name='cityName'
             className='pretty-input'
-            placeholder='New York'
+            placeholder='Search for a city..'
             value={ userInput }
             onChange={ (e) => setUserInput(e.target.value) }
           />
         </label>
         <button id="submitbtn" onClick={ () => { setCity(userInput) } }>
-  <i className="fas fa-search"></i>
-</button>
+          <i className="fas fa-search"></i>
+        </button>
+      </div>
+      <div className='weather-gif'>
+        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2FuYmp6cHNkNncyankzaGVsdms5M3BiMGQ3OHVjY2ZjN25odGlkaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l4FGkdtLGfpUiBdFC/giphy.gif" alt="weather" />
       </div>
     </>
   )

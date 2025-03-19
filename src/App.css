@@ -1,19 +1,17 @@
-/* src/styles/tailwind.css */
-/* @import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities"; */
+@import "tailwindcss";
 
 
 .App {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100%;
  
 }
 .content {
   flex: 1;
 }
 .App-header {
+  margin-top: 3%;
   background-color: rgb(67, 148, 202);
   width: 100%; /* Change from 100vh to 100% to cover the full width */
   display: flex; /* Use flexbox for layout */
@@ -26,23 +24,81 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   padding: 20px;
-  width: 60%;
-  margin: 20px auto;
+  width: 40%;
   justify-content: center;
-  margin: 20px auto; /* Center the element horizontally */
+  margin: 30px auto;
 }
-
+.weather-gif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:  rgb(199, 218, 226);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 3% auto;
+  width: 40%;
+}
+.weather-gif img {
+  width: 30%;
+  height: 30%;
+  border-radius: 8px;
+  margin: 5%;
+}
 #top-half {
   display: grid;
-  columns: 2;
-  gap: 10px;
-  flex-direction: row;
-
+  grid-template-columns: repeat(3, 1fr);  
+  grid-row: repeat(3, 1fr);
+  grid-template-areas:
+  "city city city"
+  "time time time"
+  "icon-temp description description";
+  height: 50vh;
+  padding: 20px;
+  background-color:  rgb(199, 218, 226);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  font-size: 1.5em;
-  width: 50%;
-  margin: 20px auto;
-  background-color:rgba(5, 46, 133, 0.274)
+  border-radius: 8px;
+  margin: 20px auto auto auto;
+  width: 45%;
+}
+.city {
+  grid-area: city;
+  font-size: 3em;
+
+}
+.time {
+  grid-area: time;
+  font-size: medium;
+  
+}
+
+.icon-temp {
+  display: flex;
+  grid-area: icon-temp;
+  align-items: center;
+  font-size: 2.5em;
+  background-color: rgb(163, 222, 135);
+  border-radius: 8px;
+
+}
+
+#top-half .icon img {
+  width: 120px;
+  height: 120px;
+  font-size: 3em;
+}
+
+
+#top-half .description {
+  grid-area: description;
+  justify-items: end;
+  align-items: center;
+  display: flex;
+}
+
+#top-half .description p {
+  margin: 0;
+  font-size: 2em;
+  color: #333;
 }
 #bottom-half {
   display: grid;
@@ -51,27 +107,25 @@
   flex-direction: row;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-size: 1.5em;
-  width: 50%;
+  width: 45%;
   margin: 10px auto;
   background-color:rgba(5, 46, 133, 0.274)
 }
-#reset {
-  justify-content: center;
 
-}
 .grid-container {
   display: grid; 
   width: 50%;
   justify-content: center;
   grid-template-columns: repeat(3, 1fr);
-  /*gap: 10px;  Adjust the gap between columns as needed */
+  gap: 10px; /* Adjust the gap between columns as needed */
   background-color: rgb(35, 6, 161);
   margin: 20px auto;
 }
 
 .grid-item {
   background-color: var(--light-color);
-  border: 1px solid var(--dark-color);
+  border: 1px var(--dark-color);
+  border-radius: 5px;
   text-align: center;
 }
 button {
@@ -92,12 +146,7 @@ input.pretty-input:focus {
   box-shadow: 0 0 5px rgba(0, 122, 204, 0.5);
   outline: none;
 }
-.time {
-  font-size: 1 em;
-  color: #333;
-  margin: 20px 0;
-  justify-content: left;
-}
+
 button.pretty-reset {
   padding: 10px 20px;
   border: 2px solid #61dafb;
@@ -123,6 +172,10 @@ footer {
   display: flex;
   font-size: calc(10px + 2vmin);
   color: rgba(15, 16, 17, 0.356);
-  position: fixed;
+  position: bottom;
 
+}
+footer p {
+  margin: 0 auto;
+  font-size: small;
 }
