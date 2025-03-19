@@ -30,9 +30,12 @@ function App() {
 
 
   return (
-    <div className="App"> 
+    <>
+    <div className="App">
       {(Object.keys(weatherData).length !== 0) ? <Weather data={weatherData} resetData={resetData} /> : <Search userInput={userInput} setUserInput={setUserInput} setCity={setCity} />}
     </div>
+  
+    </>
   );
 }
 

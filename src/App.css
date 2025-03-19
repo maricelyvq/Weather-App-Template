@@ -1,53 +1,181 @@
+@import "tailwindcss";
+
+
 .App {
-  display: contents;
-  size: 60%;
-  border: 1px solid black;
- 
-}
-
-
-.App-header {
-  background-color: rgb(67, 148, 202);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  font-size: calc(10px + 2vmin);
-  color: rgb(25, 8, 177);
+  min-height: 100%;
+ 
 }
-
-/* .test-header {
-  background-color: #61dafb;
-} */
-
-/* .App-link {
-  color: #61dafb;
-} */
+.content {
+  flex: 1;
+}
+.App-header {
+  margin-top: 3%;
+  background-color: rgb(67, 148, 202);
+  width: 100%; /* Change from 100vh to 100% to cover the full width */
+  display: flex; /* Use flexbox for layout */
+  padding: 5px;/* Add padding for spacing */
+  font-size: calc(10px + 2vmin);
+  color: rgba(8, 8, 8, 0.356);
+}
+.Search {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  width: 40%;
+  justify-content: center;
+  margin: 30px auto;
+}
+.weather-gif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:  rgb(199, 218, 226);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 3% auto;
+  width: 40%;
+}
+.weather-gif img {
+  width: 30%;
+  height: 30%;
+  border-radius: 8px;
+  margin: 5%;
+}
 #top-half {
   display: grid;
-  flex-direction: row;
-  font-size: xx-large;
+  grid-template-columns: repeat(3, 1fr);  
+  grid-row: repeat(3, 1fr);
+  grid-template-areas:
+  "city city city"
+  "time time time"
+  "icon-temp description description";
+  height: 50vh;
+  padding: 20px;
+  background-color:  rgb(199, 218, 226);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 20px auto auto auto;
+  width: 45%;
+}
+.city {
+  grid-area: city;
+  font-size: 3em;
+
+}
+.time {
+  grid-area: time;
+  font-size: medium;
+  
+}
+
+.icon-temp {
+  display: flex;
+  grid-area: icon-temp;
   align-items: center;
-  justify-content: center;
-  height: auto;
-  text-shadow: #61dafb;
-  color: rgb(17, 15, 15);
-  background-color: skyblue 
+  font-size: 2.5em;
+  background-color: rgb(163, 222, 135);
+  border-radius: 8px;
+
+}
+
+#top-half .icon img {
+  width: 120px;
+  height: 120px;
+  font-size: 3em;
+}
+
+
+#top-half .description {
+  grid-area: description;
+  justify-items: end;
+  align-items: center;
+  display: flex;
+}
+
+#top-half .description p {
+  margin: 0;
+  font-size: 2em;
+  color: #333;
+}
+#bottom-half {
+  display: grid;
+  columns: 2;
+  gap: 10px;
+  flex-direction: row;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1.5em;
+  width: 45%;
+  margin: 10px auto;
+  background-color:rgba(5, 46, 133, 0.274)
 }
 
 .grid-container {
   display: grid; 
+  width: 50%;
+  justify-content: center;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px; /* Adjust the gap between columns as needed */
-  padding: 10px;
-  background-color: chocolate;
+  background-color: rgb(35, 6, 161);
+  margin: 20px auto;
 }
 
 .grid-item {
   background-color: var(--light-color);
-  border: 1px solid var(--dark-color);
-  padding: 20px;
+  border: 1px var(--dark-color);
+  border-radius: 5px;
   text-align: center;
 }
 button {
 cursor: pointer;
+}
+input.pretty-input {
+  padding: 10px;
+  border: 2px solid #61dafb;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input.pretty-input:focus {
+  border-color: #007acc;
+  box-shadow: 0 0 5px rgba(0, 122, 204, 0.5);
+  outline: none;
+}
+
+button.pretty-reset {
+  padding: 10px 20px;
+  border: 2px solid #61dafb;
+  border-radius: 5px;
+  font-size: 16px;
+  color: white;
+  background-color: #007acc;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+button.pretty-reset:hover {
+  background-color: #005f99;
+}
+
+button.pretty-reset:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 122, 204, 0.5);
+}
+footer {
+  background-color: rgb(67, 148, 202);
+  width: 100%;
+  display: flex;
+  font-size: calc(10px + 2vmin);
+  color: rgba(15, 16, 17, 0.356);
+  position: bottom;
+
+}
+footer p {
+  margin: 0 auto;
+  font-size: small;
 }
