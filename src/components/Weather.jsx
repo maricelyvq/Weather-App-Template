@@ -51,7 +51,7 @@ const Weather = ({ data, resetData }) => {
           <p id='pressure'>Pressure: { data.main.pressure } in</p>
         </div>
         <div id='reset'>
-        <button className="pretty-reset" onClick={ resetData }>See a different City?</button>
+        <button className="pretty-reset" onClick={ resetData }>Looking for a different City?</button>
       </div>
       </div>
 

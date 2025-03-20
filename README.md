@@ -1,16 +1,14 @@
-# Path2Tech Weather Application
+# Weather App
 
-[Description](#description) | [Demo](#demo) | [Important Git/Github Expectations](#important-gitgithub-expectations) | [Recommended APIs](#recommended-apis) | [Getting Started](#getting-started) | [Requirements](#getting-started) | [Bonuses](#bonuses)
+[Description](#description) | [Demo](#demo) | [Installation](#installation) | [Usage](#usage) | [Features](#features) | [Technologies](#technologies) | [Contributing](#contributing) | [License](#license)
 
 ## Description
 
-You will be building a React appliction similar to the demo below. This application will enhance your existing knowledge of the React basics (components, JSX, props, event handling, using forms, making API calls, basic hooks) and allow you to practice with React best practices.
-<br>
-Below you will see a demo of the Weather Application that will load data from the OpenWeatherAPI based on a location of choice. The application will display the weather for the current day.
+The Weather App is a React application that allows users to search for and view the current weather conditions for a specified location. The app fetches data from the OpenWeatherAPI and displays it in a user-friendly interface.
 
 ## Demo
 
-** Your project does not need to look 100% like the images below, but it is encouraged to aim for it**
+**Your project does not need to look 100% like the images below, but it is encouraged to aim for it**
 ![Weather App Initial Component](readme_assets/weather_image_one.webp "Initial Component")
 ![Weather App User Input](readme_assets/weather_image_two.webp "User Input")
 ![Weather App Weather Details](readme_assets/weather_image_three.webp "Weather Details")

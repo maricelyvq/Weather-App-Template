@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 .App {
   display: flex;
   flex-direction: column;
@@ -25,9 +24,17 @@
   border-radius: 8px;
   padding: 20px;
   width: 40%;
-  justify-content: center;
-  margin: 30px auto;
+  justify-items: center;
+  margin: auto;
 }
+
+#title {
+  font-family: "Bagel Fat One", system-ui;
+  font-size: 2em;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .weather-gif {
   display: flex;
   justify-content: center;
